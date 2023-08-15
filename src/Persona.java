@@ -10,4 +10,11 @@ public class Persona {
         this.edad = edad;
         this. genero = genero;
     }
+
+    @Override
+    public String toString() {
+        return "nombre: " + nombre + '\n' +
+                "edad: " + edad + '\n' +
+                "genero: " + genero + '\n';
+    }
 }

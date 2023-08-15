@@ -2,7 +2,7 @@ package Poo_Interfaces;
 
 public class Estudiante extends Persona implements Estadisticas{
     private String carnet;
-    private double[]  notas;
+    private double[]  notas = new double[3];
     public Estudiante (String nombre, int edad, String genero, String carnet, double[] notas){
         super(nombre, edad, genero);
         this.carnet = carnet;
@@ -31,12 +31,17 @@ public class Estudiante extends Persona implements Estadisticas{
 
     @Override
     public double calcularMinimo() {
-        double min = 0;
+        double min = 5;
         for(int i = 0; i < notas.length; i++){
             if(notas[i] < min){
                 min = notas[i];
             }
         }
         return min;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }
