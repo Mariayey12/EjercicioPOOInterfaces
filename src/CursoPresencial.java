@@ -5,9 +5,10 @@ import java.util.ArrayList;
 public class CursoPresencial extends Curso{
     private String horario;
 
-    public CursoPresencial(String nombreCurso, String horario, Profesor profesor){
-        super(nombreCurso,profesor);
+    public CursoPresencial(String nombreCurso, String horario, Profesor profesor,Estudiante estudiante){
+        super(nombreCurso,profesor,estudiante);
         this.horario = horario;
+
     }
 
     public double calcularAsistenciasPromedio(){
@@ -18,7 +19,7 @@ public class CursoPresencial extends Curso{
     @Override
     public String toString() {
         return "Curso Presencial\n" +
-                "horario: " + horario +
+                "horario: " + horario+
                 super.toString();
     }
 }

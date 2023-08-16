@@ -1,5 +1,7 @@
 package Poo_Interfaces;
 import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Profesor extends Persona{
     private String titulo;
     private ArrayList<String> materias = new ArrayList<String>();
@@ -14,15 +16,16 @@ public class Profesor extends Persona{
         return titulo;
     }
 
+
     public ArrayList<String> getMaterias() {
         return materias;
     }
 
+
     @Override
     public String toString() {
         return super.toString()+ "Titulo: "+titulo+
-        "\nMaterias: "+ getMaterias();
-
+                "\nMaterias: "+ getMaterias();
     }
 
 

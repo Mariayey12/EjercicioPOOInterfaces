@@ -1,8 +1,11 @@
 package Poo_Interfaces;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Estudiante extends Persona implements Estadisticas{
     private String carnet;
-    private double[]  notas = new double[3];
+    private static double[]  notas = new double[3];
     public Estudiante (String nombre, int edad, String genero, String carnet, double[] notas){
         super(nombre, edad, genero);
         this.carnet = carnet;
@@ -42,6 +45,9 @@ public class Estudiante extends Persona implements Estadisticas{
 
     @Override
     public String toString() {
-        return super.toString();
+        return super.toString()+
+                "Carnet: "+ carnet +
+                "\nnotas: " + Arrays.toString(Estudiante.notas)+"\n";
     }
+
 }

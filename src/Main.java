@@ -6,8 +6,11 @@ public class Main {
         Estudiante e1 = new Estudiante("Juan",16,"Masculino","1Q2E3E",ne1);
         ArrayList<String> mp1 = new ArrayList<>();
         mp1.add("Matemáticas");
+        mp1.add("Español");
+
         Profesor p1 = new Profesor("Rigo",48,"Masculino","Ingeniero Industrial",mp1);
-        CursoPresencial curso1 = new CursoPresencial("Programacion","Diruno",p1);
+        ArrayList<Estudiante>  ae1 = new ArrayList<>();
+        CursoPresencial curso1 = new CursoPresencial("Programacion","Diruno",p1,e1);
 
         System.out.println(curso1.toString());
         System.out.println("el promedio del estudiante:"+e1.calcularPromedio());
