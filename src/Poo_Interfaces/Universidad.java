@@ -15,6 +15,19 @@ class Universidad {
 
     // Método para mostrar la información de cursos, profesores y estudiantes
     public void mostrarInformacionCompleta() {
-        // Lógica para mostrar información completa
+        System.out.println("Información completa de la universidad:");
+        System.out.println("------------------------------------");
+
+        for (Curso curso : cursos) {
+            System.out.println("Curso: " + curso.nombreCurso);
+            System.out.println("Profesor: " + curso.profesor.nombre);
+            System.out.println("Estudiantes inscritos:");
+
+            for (Estudiante estudiante : curso.estudiantes) {
+                System.out.println("  " + estudiante.nombre);
+            }
+
+            System.out.println();
+        }
     }
 }

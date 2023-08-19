@@ -10,6 +10,7 @@ interface Estadisticas {
 interface Gestionable {
     void inscribirEstudiante(Estudiante estudiante);
     void retirarEstudiante(Estudiante estudiante);
+    double calcularPromedio();
 }
 
 
